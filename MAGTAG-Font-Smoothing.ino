@@ -18,7 +18,8 @@ void setup() {
   display.setFullWindow();
   display.firstPage();
   do {
-      display.fillScreen(GxEPD_WHITE);
+      display.fillRect(0, 0, DISP_W, DISP_H, GxEPD_BLACK);
+      display.fillRect(12, 12, DISP_W-2*12, DISP_H-2*12, GxEPD_WHITE);
       for (int i = 2; i >= 0; --i) {
         display.setTextColor((i==2) ? GxEPD_LIGHTGREY : 
                              (i==1) ? GxEPD_DARKGREY : 
